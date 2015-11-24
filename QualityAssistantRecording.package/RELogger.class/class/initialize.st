@@ -1,8 +1,8 @@
 class initialization
 initialize
 
-	ReSystemAnnouncer uniqueInstance announcer unsubscribe: self.
-	ReSystemAnnouncer uniqueInstance announcer weak
+	ReSystemAnnouncer uniqueInstance unsubscribe: self.
+	ReSystemAnnouncer uniqueInstance weak
 		when: QACriticsSeen       send: #logSeenCritics:  to: self;
 		when: ReEntityCriticized  send: #logCriticized:   to: self;
 		when: QAInitiateCriticBan send: #logInitiatedBan: to: self;
